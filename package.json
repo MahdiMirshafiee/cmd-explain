@@ -10,7 +10,6 @@
     "dev": "nodemon src/main.js",
     "start": "node src/main.js"
   },
-
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -30,5 +29,8 @@
   "description": "CLI to explain any shell command via GPT-4o API",
   "devDependencies": {
     "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "env": "^0.0.2"
   }
 }
