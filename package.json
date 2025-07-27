@@ -1,0 +1,34 @@
+{
+  "name": "@MahdiMirshafiee/cmdexplain",
+  "version": "0.1.0",
+  "main": "./src/main.js",
+  "bin": {
+    "cmdexplain": "./bin/cmdexplain.js",
+    "cex": "./bin/cmdexplain.js"
+  },
+  "scripts": {
+    "dev": "nodemon src/main.js",
+    "start": "node src/main.js"
+  },
+
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MahdiMirshafiee/cmd-explain.git"
+  },
+  "keywords": [
+    "cli",
+    "terminal",
+    "commands",
+    "ai",
+    "shell"
+  ],
+  "author": "Mahdi Mirshafiee",
+  "license": "MIT",
+  "description": "CLI to explain any shell command via GPT-4o API",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
