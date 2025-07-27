@@ -22,8 +22,12 @@ const userCommand = args.join(" ");
 
 explainCommand(userCommand)
   .then((output) => {
-    console.log("\n Explanation:");
-    console.log(output);
+    if (output === "0") {
+      return console.log("The input is wrong");
+    } else {
+      console.log("\n Explanation:");
+      console.log(output);
+    }
   })
   .catch((err) => {
     console.log(`Error: ${err.message}`);
