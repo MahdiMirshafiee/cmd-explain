@@ -25,7 +25,7 @@ explainCommand(userCommand)
     if (output === "0") {
       return console.log("The input is wrong");
     } else {
-      console.log("\n Explanation:");
+      console.log("\nExplanation:");
       console.log(output);
     }
   })
