@@ -1,5 +1,7 @@
 const { OpenAI } = require("openai");
-require("dotenv").config();
+const path = require('path');
+
+require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 
 async function explainCommand(command) {
   const apiKey = process.env.API_TOKEN;
