@@ -6,11 +6,11 @@ const args = process.argv.slice(2);
 
 if (args.length === 0 || args.includes("-h") || args.includes("--help")) {
   console.log(`
-CMD Explain - Terninal Command Helper
+CMD Explain - Terminal Command Helper
 
 Usage:
-cmdexplain <your-terminal-command>
-cex <your-terminal-command>
+cmdexplain <your-command>
+cex <your-command>
 
 Options:
 --help, -h      show this help message
