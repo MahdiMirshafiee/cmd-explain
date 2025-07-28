@@ -9,25 +9,33 @@ async function explainCommand(command) {
 
   const client = new OpenAI({
     apiKey,
-    baseURL: "https://openrouter.ai/api/v1", 
+    baseURL: "https://openrouter.ai/api/v1",
   });
 
   const messages = [
     {
       role: "system",
-      content: "You are an AI assistant specialized in explaining shell commands (bash, git, npm, docker, etc.). When given a valid shell command, provide a concise and professional explanation, formatted for terminal display in English only and in text type don't use markdawn or anything else. If the input is not a recognizable shell command or is unrelated text, respond with exactly “0” and nothing else."
+      content: `
+You are a shell assistant that explains CLI commands in a consistent and minimal format suitable for display in a terminal. Always respond using the following format and nothing else:
+
+Command: [original]
+Summary: [brief explanation in 1-2 lines]
+Usage: [command syntax with placeholders]
+      
+Do not use bullet points, Markdown, or any decorative formatting. Keep the language simple and concise."
+If the input is not a recognizable shell command or is unrelated text, respond with exactly “0” and nothing else.`,
     },
     {
       role: "user",
-      content: `Explain: ${command}`
-    }
+      content: `Explain: ${command}`,
+    },
   ];
 
   const resp = await client.chat.completions.create({
-    model: "openai/gpt-4o", 
+    model: "openai/gpt-4o",
     messages,
-    max_tokens: 150,
-    temperature: 0.3
+    max_tokens: 60,
+    temperature: 0.3,
   });
 
   return resp.choices[0].message.content.trim();

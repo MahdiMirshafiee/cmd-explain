@@ -23,10 +23,13 @@ const userCommand = args.join(" ");
 explainCommand(userCommand)
   .then((output) => {
     if (output === "0") {
-      return console.log("The input is wrong");
+      return console.log(
+        "\n" +
+          "Sorry, I didn't recognize that. Please enter a valid shell command." +
+          "\n"
+      );
     } else {
-      console.log("\nExplanation:");
-      console.log(output);
+      console.log("\n" + output + "\n");
     }
   })
   .catch((err) => {
