@@ -1,6 +1,7 @@
 # CMD Explain
 
-A simple **CLI** tool that explains any shell command using **GPT-4o**. Perfect for learning new commands or understanding complex terminal operations.
+A simple **CLI** tool that explains any shell command using **GPT-4o**.
+Perfect for learning new commands or understanding complex terminal operations.
 
 ## Features
 
@@ -21,7 +22,7 @@ npm link
 
 ## Setup
 
-1. Get an API key from [`enRouter`](https://openrouter.ai/)
+1. Get an API key from [`openRouter`](https://openrouter.ai/)
 2. Create a `.env` file in the project directory:
 ```bash
 API_TOKEN=your_openrouter_api_key_here
